@@ -18,7 +18,7 @@ In the experiment, Udacity tested a change where if the student clicked "start f
 fewer than 5 hours per week, a message would appear indicating that Udacity courses usually require a greater time commitment for successful completion, and suggesting that the student might like to access the course materials for free. At this point, the student would have the option to
 continue enrolling in the free trial, or access the course materials for free instead.
 
-![alt text](img/Screen.jpg)
+![alt text](img/screen.jpg)
 <end>
 
 The hypothesis was that this might set clearer expectations for students upfront, thus reducing the number of frustrated students who left the free trial because they didn't have enough time—without significantly reducing the number of students to continue past the free trial and eventually
@@ -72,7 +72,7 @@ a) Number of Samples vs. Power (see "ProjectBaselineValues.xlsx" for detailed ca
 
 Based on Beta, Alpha, Baseline conversion and minimum detectable effect I used a web calculator tool to calculate the sample size per branch (Tool used - [http://www.evanmiller.org/ab-testing/sample-size.html](http://www.evanmiller.org/ab-testing/sample-size.html "Sample Size Calculator")
 
-![alt text](img/Capture.jpg)
+![alt text](img/capture.jpg)
 <end>
 
 To achieve sufficient power for both evaluation metrics we require a total number of page view of 685325. Bonferroni correction is not used since both evaluation metrics have to be valid and Bonferroni correction is "over" conservative for high correlation metrics.
