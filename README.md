@@ -26,7 +26,7 @@ The list below explains the use of each available metric as an invariant or eval
 **Invariant metric: YES** - it is used as initial unit of diversion to make sure that I split equally between control and experiment group. **Evaluation metric: NO** - invariant metric should not change between tests (control, experiment)
 
 (2) **Number of userids:** That is, number of users who enroll in the free trial (dmin=50):
-**Invariant metric: NO** - this metric can not be used for diversion. **Evaluation metric: NO** - the number depends on whether the students enrolls into the "start free-trail" or not. Only there I would get the userids
+**Invariant metric: NO** - this metric can not be used for diversion. **Evaluation metric: YES** - userids is equivalent to enrollments, when the user starts the free trial she/he has to register and give her/his credit card information. Therefore we can use this as an evaluation metric since we would expect a difference between the control and experiment group
 
 (3) **Number of clicks:** That is, number of unique cookies to click the "Start free trial" button (which happens before the free trial screener is trigger) (dmin=240):
 **Invariant metric: YES** - check that the same amount of users proceed from course page to the experiment page under controlled and experiment conditions. **Evaluation metric: NO** - invariant metric should not change between tests (control, experiment)
@@ -51,6 +51,8 @@ I used the baseline values to analytically estimate the standard deviation (SD) 
 
 **Net conversion:** N=400; p=0.1093; **SD=0.0156**
 
+**Number of userids:** N=5000; p=0.0165; **SD=0.0018**
+
 A binomial distribution follows a normal distribution for large sample sizes. Both metrics (Gross- and Net conversion) depend on a number of unique cookies that click "start free trial" button, which is in line with our unit of diversion. This should lead to the assumption that the analytic estimate should be comparable to the empirical variability.
 
 ### Sizing
@@ -62,7 +64,9 @@ Based on "Beta", "Alpha", "Baseline conversion" and "minimum detectable effect" 
 ![alt text](img/capture.jpg)
 <end>
 
-To achieve sufficient power for both evaluation metrics a total number of page view of 685325 is required. Bonferroni correction is not used since both evaluation metrics have to be valid and Bonferroni correction is "over" conservative for high correlation metrics.
+Since userids would need the experiment to run for 104 days, I will not consider it further as an evaluation metric.
+
+To achieve sufficient power for gross- and net conversion a total number of page view of 685325 is required. Bonferroni correction is not used since both evaluation metrics have to be valid and Bonferroni correction is "over" conservative for high correlation metrics.
 
 b) Duration vs. Exposure
 Based on the KPI "Unique cookies a day" = 40000 the experiment has to run 18 days. 
